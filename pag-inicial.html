@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="pag-inicial.css" />
+    </head>
+    <body>
+        <header>
+            <a href="pag-inicial.html" class="logo">langscape</a>
+            <nav>
+                <ul>
+                    <li><a href="" class="aberto">Home</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Carreira</a></li>
+                    <li><a href="login.html">Entrar</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container-img">
+                <img src="imagens/img-pag-inicial.jpg" alt="" />
+            </div>
+            <div id="main-container">
+                <div id="container-carrossel">
+                    <!-- início -->
+                    <div id="main-inicio">
+                        <div class="caixa">
+                            <div class="sub-caixa">
+                                <h1>Nome da rede social</h1>
+                                <p>
+                                    Atinja a fluência no seu idioma de estudo de
+                                    forma leve e natural, enquando interage com
+                                    pessoas de todo o mundo
+                                </p>
+                            </div>
+                            <button class="botao" id="botao-cadastro">
+                                Criar conta
+                            </button>
+                        </div>
+                        <div class="caixa">
+                            <p>Já tem uma conta?</p>
+                            <button
+                                class="botao"
+                                id="botao-login"
+                                onclick="plusSlide(-1)"
+                            >
+                                Entrar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- login -->
+                    <div id="container-login">
+                        <div class="voltar">
+                            <!-- <a href="pag-inicial.html"> -->
+                            <i
+                                data-feather="arrow-left"
+                                class="icone-seta-esq"
+                                id="botao-voltar-login"
+                            ></i>
+                            <!-- </a> -->
+                            <p>langscape</p>
+                        </div>
+                        <div class="h2-form">
+                            <h2>Login</h2>
+                            <div class="caixa-form">
+                                <form action="">
+                                    <!-- campo email ou usuario -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="mail"
+                                                class="icone-mail"
+                                            ></i>
+                                            <label for="email-user"
+                                                >E-mail ou usuário
+                                                <span>*</span></label
+                                            >
+                                        </div>
+                                        <input
+                                            type="text"
+                                            name="email-user"
+                                            id="input-email-user"
+                                        />
+                                    </div>
+
+                                    <!-- campo senha -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="lock"
+                                                class="icone-lock"
+                                            ></i>
+                                            <label for="senha"
+                                                >Senha <span>*</span></label
+                                            >
+                                        </div>
+                                        <input
+                                            type="password"
+                                            name="senha"
+                                            id="input-senha-login"
+                                        />
+                                    </div>
+
+                                    <button type="submit" id="botao-entrar">
+                                        Entrar
+                                    </button>
+                                </form>
+                                <div class="ou"><p>ou</p></div>
+                                <a href="" class="entrar-com-google">
+                                    <i class="bi bi-google"></i>
+                                    <p>Entrar com o Google</p>
+                                </a>
+                            </div>
+                            <div class="caixa-nao-tem-conta">
+                                <p id="nao-tem-conta">Não tem uma conta?</p>
+                                <button>Criar conta</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- cadastro -->
+                    <div id="container-cadastro">
+                        <div class="voltar">
+                            <!-- <a href="pag-inicial.html"> -->
+                            <i
+                                data-feather="arrow-left"
+                                class="icone-seta-esq"
+                                id="botao-voltar-cadastro"
+                            ></i>
+                            <!-- </a> -->
+                            <p>langscape</p>
+                        </div>
+                        <div class="h2-form">
+                            <h2>Cadastro</h2>
+                            <div class="caixa-form">
+                                <form action="">
+                                    <!-- campo nome -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="mail"
+                                                class="icone-mail"
+                                            ></i>
+                                            <label for="email-user"
+                                                >Nome <span>*</span></label
+                                            >
+                                        </div>
+                                        <input
+                                            type="text"
+                                            name="nome"
+                                            id="input-nome"
+                                        />
+                                    </div>
+
+                                    <!-- campo email ou telefone -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="mail"
+                                                class="icone-mail"
+                                            ></i>
+                                            <label for="email-user"
+                                                >E-mail ou telefone
+                                                <span>*</span></label
+                                            >
+                                        </div>
+                                        <input
+                                            type="text"
+                                            name="email-user"
+                                            id="input-email-telefone"
+                                        />
+                                    </div>
+
+                                    <!-- campo senha -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="lock"
+                                                class="icone-lock"
+                                            ></i>
+                                            <label for="senha"
+                                                >Senha <span>*</span></label
+                                            >
+                                        </div>
+                                        <input
+                                            type="password"
+                                            name="senha"
+                                            id="input-senha-cadastro"
+                                        />
+                                    </div>
+
+                                    <button id="cadastro-avancar">
+                                        Avançar
+                                    </button>
+                                    <!-- adicionar type=submit mas não deixar recarregar a tela -->
+                                </form>
+                                <div class="ou"><p>ou</p></div>
+                                <a href="" class="entrar-com-google">
+                                    <i class="bi bi-google"></i>
+                                    <p>Entrar com o Google</p>
+                                </a>
+                            </div>
+                            <div class="caixa-ja-tem-conta">
+                                <p id="ja-tem-conta">Já tem uma conta?</p>
+                                <button>Entrar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- configurações do perfil -->
+                    <div id="container-conf-perfil">
+                        <div class="voltar">
+                            <!-- <a href="pag-inicial.html"> -->
+                            <i
+                                data-feather="arrow-left"
+                                class="icone-seta-esq"
+                                id="botao-voltar-login"
+                            ></i>
+                            <!-- </a> -->
+                            <p>langscape</p>
+                        </div>
+                        <div class="h2-form">
+                            <h2>Login</h2>
+                            <div class="caixa-form">
+                                <form action="">
+                                    <!-- campo email ou usuario -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="mail"
+                                                class="icone-mail"
+                                            ></i>
+                                            <label for="email-user"
+                                                >E-mail ou usuário
+                                                <span>*</span></label
+                                            >
+                                        </div>
+                                        <input type="text" name="email-user" />
+                                    </div>
+
+                                    <!-- campo senha -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="lock"
+                                                class="icone-lock"
+                                            ></i>
+                                            <label for="senha"
+                                                >Senha <span>*</span></label
+                                            >
+                                        </div>
+                                        <input type="password" name="senha" />
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        id="botao-avancar-perfil"
+                                    >
+                                        Entrar
+                                    </button>
+                                </form>
+                                <div class="ou"><p>ou</p></div>
+                                <a href="" class="entrar-com-google">
+                                    <i class="bi bi-google"></i>
+                                    <p>Entrar com o Google</p>
+                                </a>
+                            </div>
+                            <div class="caixa-nao-tem-conta">
+                                <p id="nao-tem-conta">Não tem uma conta?</p>
+                                <button>Criar conta</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- configurações de idioma -->
+
+                    <!-- configurações de interesses -->
+
+                    <!-- conta criada -->
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+        <script>
+            feather.replace();
+        </script>
+        <script src="login.js"></script>
+        <script src="carrosselHome.js"></script>
+        <script src="forms.js"></script>
+    </body>
+</html>

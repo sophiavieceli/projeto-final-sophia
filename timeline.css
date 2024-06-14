@@ -1,0 +1,126 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 3rem;
+    align-items: center;
+
+    & .parte-1-header {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    & .parte-2-header {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        & .escolher-idioma {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            background-color: #f2f2f2;
+            border-radius: 2rem;
+            padding: 0.5rem;
+
+            & img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        & .img-perfil {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5rem;
+        }
+    }
+}
+
+main {
+    overflow-y: auto;
+    & .post {
+        width: 40rem;
+        padding-bottom: 2rem;
+        margin: 3rem auto;
+        border-bottom: 1.5px solid #f2f2f2;
+
+        & .linha-1-post {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & .img-nome-usuario-hora {
+                display: flex;
+                gap: 1rem;
+
+                & img {
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 5rem;
+                }
+
+                & .nome-usuario-hora {
+                    display: flex;
+                    gap: 1.5rem;
+                    align-items: center;
+
+                    & .nome-usuario {
+                        display: flex;
+                        gap: 0.8rem;
+                        align-items: center;
+
+                        & .nome {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .linha-2-post {
+            margin: 1rem 4rem;
+            display: flex;
+            flex-flow: column;
+            gap: 0.5rem;
+
+            & img {
+                border-radius: 2rem;
+            }
+        }
+
+        & .linha-3-post {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 2rem;
+
+            & .icones {
+                display: flex;
+                gap: 1.5rem;
+                align-items: center;
+            }
+
+            & .comentar {
+                display: flex;
+                gap: 0.3rem;
+
+                & p,
+                i {
+                    background-color: #fd7d97;
+                    padding: 0.5rem 1.5rem;
+                }
+
+                & p {
+                    border-top-left-radius: 5rem;
+                    border-bottom-left-radius: 5rem;
+                    width: 15rem;
+                }
+
+                & i {
+                    border-top-right-radius: 5rem;
+                    border-bottom-right-radius: 5rem;
+                }
+            }
+        }
+    }
+}

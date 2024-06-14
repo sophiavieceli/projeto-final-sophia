@@ -1,0 +1,12 @@
+{
+    "name": "projeto-final-sophia",
+    "version": "1.0.0",
+    "main": "login.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Sophia Vieceli",
+    "license": "ISC",
+    "description": "",
+    "type": "module"
+}

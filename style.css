@@ -1,0 +1,24 @@
+:root {
+    --cinza-texto: #404040;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--cinza-texto);
+    font-family: "Figtree", sans-serif;
+}
+
+button {
+    font-family: inherit;
+    color: inherit;
+}

@@ -1,0 +1,290 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    z-index: 999;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #ebebeb;
+
+    & .logo {
+        text-decoration: none;
+        color: inherit;
+        font-size: 2.4rem;
+        font-weight: 500;
+    }
+
+    & nav {
+        & ul {
+            display: flex;
+            gap: 3rem;
+
+            & li {
+                list-style: none;
+
+                & a {
+                    &:link,
+                    &:visited {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+
+                    &:hover,
+                    &:active {
+                        font-weight: 500;
+                    }
+
+                    &.aberto {
+                        background-color: #fd7d97;
+                        padding: 1rem;
+                        border-radius: 1rem;
+                        box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+
+    & .container-img {
+        max-width: fit-content;
+        & img {
+            /* height: 80rem; */
+            width: 100%;
+        }
+    }
+
+    & #main-container {
+        width: 400rem;
+        /* overflow-x: hidden; */
+        /* height: 100%; */
+
+        & #container-carrossel {
+            display: flex;
+            width: 100%;
+            /* height: 100%; */
+            overflow-x: hidden;
+            /* transition-property: transform;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out; */
+
+            & #main-inicio {
+                /* display: none; */
+                display: flex;
+                /* width: 100%; */
+                flex-basis: 100%;
+                flex-shrink: 0;
+                padding: 7rem 5rem;
+                flex-flow: column;
+                gap: 3rem;
+
+                & h1 {
+                    font-size: 4.4rem;
+                    font-weight: 600;
+                }
+
+                & .caixa {
+                    display: flex;
+                    flex-flow: column;
+                    gap: 1.5rem;
+
+                    & .sub-caixa {
+                        display: flex;
+                        flex-flow: column;
+                        gap: 0.8rem;
+
+                        & p {
+                            max-width: 50rem;
+                        }
+                    }
+                }
+
+                & .botao {
+                    all: unset;
+                    background-color: #fd7d97;
+                    border: 1.5px solid #fd7d97;
+                    padding: 1rem 2rem;
+                    border-radius: 5rem;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease-in;
+                    width: 10rem;
+                    text-align: center;
+                    box-shadow: -1rem 0 3rem -1rem rgba(253, 125, 151, 0.616),
+                        0rem 0.3rem 3rem -0.5rem rgba(253, 125, 151, 0.616);
+                    font-family: inherit;
+
+                    &:hover {
+                        background-color: #ffcdd3;
+                    }
+                }
+            }
+        }
+    }
+
+    & #container-login,
+    & #container-cadastro {
+        display: none;
+        /* width: 100%; */
+        flex-basis: 100%;
+        flex-shrink: 0;
+        padding: 10rem 2rem 5rem 2rem;
+        margin: 0 auto;
+        flex-flow: column;
+        position: relative;
+        align-items: center;
+
+        & .voltar {
+            display: flex;
+            gap: 1rem;
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+            align-items: center;
+
+            & a {
+                color: #404040;
+
+                & .icone-seta-esq {
+                    width: 2.5rem;
+                    height: 2.5rem;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        & .h2-form {
+            display: flex;
+            flex-flow: column;
+            gap: 3rem;
+
+            & h2 {
+                font-size: 3.2rem;
+            }
+
+            & .caixa-form {
+                border: 1px solid #ebebeb;
+                border-radius: 1rem;
+                padding: 3rem 2.5rem;
+                display: flex;
+                flex-flow: column;
+                gap: 2rem;
+                width: 30rem;
+
+                & form {
+                    display: flex;
+                    flex-flow: column;
+                    gap: 2rem;
+                    max-width: 100rem;
+                    align-items: center;
+
+                    & .label-input {
+                        display: flex;
+                        flex-flow: column;
+                        gap: 0.8rem;
+                        width: 100%;
+
+                        & div {
+                            display: flex;
+                            gap: 1rem;
+                            align-items: center;
+
+                            & .icone-mail,
+                            .icone-lock {
+                                width: 2rem;
+                                height: 2rem;
+                            }
+
+                            & span {
+                                color: red;
+                            }
+                        }
+
+                        & input {
+                            all: unset;
+                            border-bottom: 1px solid #ebebeb;
+                            font-size: 1.4rem;
+                            padding: 0.5rem;
+
+                            &:focus {
+                                background-color: none;
+                            }
+
+                            &.erro {
+                                border-bottom-color: red;
+                            }
+                        }
+                    }
+
+                    & button {
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                        background-color: #fd7d97;
+                        padding: 1rem 2rem;
+                        width: max-content;
+                        border-radius: 3rem;
+                        font-family: inherit;
+                    }
+                }
+
+                & .ou {
+                    border-bottom: 1px solid #ebebeb;
+                    display: flex;
+                    justify-content: center;
+                    width: 80%;
+                    align-self: center;
+                    margin-bottom: 2rem;
+
+                    & p {
+                        color: #ebebeb;
+                        background-color: white;
+                        transform: translateY(50%);
+                        padding: 0 1.5rem;
+                    }
+                }
+
+                & .entrar-com-google {
+                    text-decoration: none;
+                    color: inherit;
+                    display: flex;
+                    gap: 2rem;
+                    background-color: #f1f5f7;
+                    padding: 1rem 2rem;
+                    border-radius: 5rem;
+                }
+            }
+
+            & .caixa-nao-tem-conta,
+            & .caixa-ja-tem-conta {
+                display: flex;
+                flex-flow: column;
+                gap: 1.5rem;
+                align-items: center;
+
+                & button {
+                    cursor: pointer;
+                    border: 0;
+                    background-color: #f1f5f7;
+                    padding: 1rem 2rem;
+                    border-radius: 5rem;
+                }
+            }
+        }
+    }
+
+    & #container-login {
+    }
+
+    & #container-cadastro {
+    }
+}
