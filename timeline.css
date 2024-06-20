@@ -1,13 +1,30 @@
+.icone,
+.icone-post {
+    cursor: pointer;
+    transition: fill 0.1s linear;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 2.5rem 3rem;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+    height: 10.4rem;
+    border-bottom: 1px solid #ebebeb;
 
     & .parte-1-header {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
+        & a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 2.4rem;
+            font-weight: 500;
+        }
     }
 
     & .parte-2-header {
@@ -15,17 +32,57 @@ header {
         gap: 2rem;
         align-items: center;
 
-        & .escolher-idioma {
+        & .container-idioma {
             display: flex;
-            flex-flow: column;
-            align-items: center;
-            background-color: #f2f2f2;
-            border-radius: 2rem;
-            padding: 0.5rem;
+            flex-flow: row;
+            gap: 0.5rem;
 
-            & img {
-                width: 4rem;
-                height: 4rem;
+            & > div {
+                background-color: #f2f2f2;
+                display: flex;
+            }
+
+            & .escolher-idioma {
+                /* position: absolute; */
+                border-radius: 1rem;
+                align-items: center;
+                /* top: 6rem; */
+                gap: 1.5rem;
+                display: none;
+                padding: 0.8rem 1rem;
+
+                & div {
+                    /* padding: 0.3rem 1.5rem; */
+
+                    & svg {
+                        cursor: pointer;
+                        padding: 0 0.1rem;
+                        border: 1px solid transparent;
+
+                        &:hover,
+                        &:active {
+                            border-color: #fd7d97;
+                            border-radius: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            & .idioma-atual {
+                align-items: center;
+                border-radius: 1rem;
+                /* position: relative; */
+                gap: 0.8rem;
+                padding: 1rem;
+
+                /* & svg {
+                    width: 4rem;
+                    height: 4rem;
+                } */
+
+                & .bi-chevron-compact-right {
+                    display: none;
+                }
             }
         }
 
@@ -37,89 +94,260 @@ header {
     }
 }
 
-main {
-    overflow-y: auto;
-    & .post {
+#container-modal-postar {
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebebc3;
+    /* transition-property: display;
+    transition-duration: 2000ms;
+    transition-timing-function: ease-in; */
+
+    & #modal-postar {
+        background-color: #fff;
+        padding: 3rem;
+        border-radius: 2rem;
+        border: 1px solid #ebebeb;
         width: 40rem;
-        padding-bottom: 2rem;
-        margin: 3rem auto;
-        border-bottom: 1.5px solid #f2f2f2;
-
-        & .linha-1-post {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            & .img-nome-usuario-hora {
-                display: flex;
-                gap: 1rem;
-
-                & img {
-                    width: 4rem;
-                    height: 4rem;
-                    border-radius: 5rem;
-                }
-
-                & .nome-usuario-hora {
-                    display: flex;
-                    gap: 1.5rem;
-                    align-items: center;
-
-                    & .nome-usuario {
-                        display: flex;
-                        gap: 0.8rem;
-                        align-items: center;
-
-                        & .nome {
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-        }
+        box-shadow: 0.5rem 0.5rem 1rem rgb(0, 0, 0, 0.05);
 
         & .linha-2-post {
-            margin: 1rem 4rem;
-            display: flex;
-            flex-flow: column;
-            gap: 0.5rem;
-
-            & img {
-                border-radius: 2rem;
+            & input {
+                all: unset;
             }
         }
 
         & .linha-3-post {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 2rem;
+            & .corrigir-postar {
+                display: flex;
+                gap: 1rem;
 
-            & .icones {
+                & > p {
+                    padding: 0.5rem 1.5rem;
+                    border: 1px solid #ebebeb;
+                    border-radius: 3rem;
+                    cursor: pointer;
+                }
+
+                & #botao-corrigir {
+                    background-color: #ebebeb;
+                }
+                & #botao-postar {
+                    background-color: #ebebeb3f;
+                }
+            }
+        }
+
+        & .linha-4-post {
+            margin-top: 1.5rem;
+            margin-left: 1.5rem;
+
+            & div {
+                display: flex;
+                gap: 0.8rem;
+                background-color: #ebebeb;
+                width: max-content;
+                padding: 0.5rem 1.5rem;
+                border-radius: 3rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.container {
+    & #postar {
+        z-index: 1002;
+        width: 7rem;
+        height: 7rem;
+        background-color: #fd7d97;
+        position: fixed;
+        bottom: 4rem;
+        right: 10%;
+        border-radius: 5rem;
+        box-shadow: 0.3rem 0 1rem rgba(253, 125, 151, 0.619);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition-property: width, height;
+        transition-duration: 0.1s;
+        transition-timing-function: ease;
+    }
+
+    & .menu {
+        position: fixed;
+        top: 10.4rem;
+        left: 0;
+        bottom: 0;
+        /* background-color: #f2f2f2; */
+        background-color: #fff;
+        /* width: max-content; */
+        /* width: 30.9906rem; */
+        width: 9rem;
+        z-index: 999;
+        display: flex;
+        flex-flow: column;
+        gap: 4rem;
+        padding: 4rem 2.5rem;
+        /* align-items: center; */
+        border-right: 1px solid #ebebeb;
+        /* transition: width 0.2s ease-in; */
+
+        & nav {
+            padding: 0.8rem;
+
+            & ul {
+                list-style: none;
+                display: flex;
+                flex-flow: column;
+                gap: 2.5rem;
+
+                & li {
+                    display: flex;
+                    gap: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        & .modo-noturno {
+            display: flex;
+            gap: 1.5rem;
+            background-color: #f2f2f2;
+            /* padding: 0.7rem 2rem; */
+            padding: 1.2rem;
+            border-radius: 3rem;
+            align-items: center;
+            cursor: pointer;
+            /* align-self: center; */
+            align-self: flex-start;
+
+            & .icone-lua {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+
+            & p {
+                font-size: 1.4rem;
+            }
+        }
+
+        & p {
+            display: none;
+            /* transition:  0.2s ease-in; */
+        }
+
+        &:hover {
+            width: 25rem;
+
+            & p {
+                display: flex;
+            }
+        }
+    }
+
+    & main {
+        overflow-y: auto;
+        padding-top: 11rem;
+    }
+}
+
+& .post {
+    width: 40rem;
+    padding-bottom: 2rem;
+    margin: 3rem auto;
+    border-bottom: 1.5px solid #f2f2f2;
+
+    & .icone-post {
+        width: 2rem;
+        cursor: pointer;
+    }
+
+    & .linha-1-post {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .img-nome-usuario-hora {
+            display: flex;
+            gap: 1rem;
+
+            & img {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 5rem;
+            }
+
+            & .nome-usuario-hora {
                 display: flex;
                 gap: 1.5rem;
                 align-items: center;
+
+                & .nome-usuario {
+                    display: flex;
+                    gap: 0.8rem;
+                    align-items: center;
+
+                    & .nome {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    & .linha-2-post {
+        margin: 1rem 4rem;
+        display: flex;
+        flex-flow: column;
+        gap: 0.5rem;
+
+        & img {
+            border-radius: 2rem;
+        }
+    }
+
+    & .linha-3-post {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+
+        & .icones {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        & .comentar {
+            display: flex;
+            gap: 0.25rem;
+            align-items: center;
+
+            & p,
+            & .caixa-icone-comentar {
+                padding: 0.3rem 1.5rem;
+                height: 3.5rem;
+                display: flex;
+                align-items: center;
             }
 
-            & .comentar {
-                display: flex;
-                gap: 0.3rem;
+            & p {
+                border: 1.5px solid #fd7d97;
+                border-top-left-radius: 5rem;
+                border-bottom-left-radius: 5rem;
+                width: 15rem;
+            }
 
-                & p,
-                i {
-                    background-color: #fd7d97;
-                    padding: 0.5rem 1.5rem;
-                }
-
-                & p {
-                    border-top-left-radius: 5rem;
-                    border-bottom-left-radius: 5rem;
-                    width: 15rem;
-                }
-
-                & i {
-                    border-top-right-radius: 5rem;
-                    border-bottom-right-radius: 5rem;
-                }
+            & .caixa-icone-comentar {
+                background-color: #fd7d97;
+                border-top-right-radius: 5rem;
+                border-bottom-right-radius: 5rem;
+                cursor: pointer;
             }
         }
     }
