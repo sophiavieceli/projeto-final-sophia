@@ -23,10 +23,10 @@
             <a href="pag-inicial.html" class="logo">langscape</a>
             <nav>
                 <ul>
-                    <li><a href="" class="aberto">Home</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Carreira</a></li>
-                    <li><a href="login.html">Entrar</a></li>
+                    <li class="aberto" id="item-nav-home">Home</li>
+                    <li>Blog</li>
+                    <li>Carreira</li>
+                    <li id="item-nav-entrar">Entrar</li>
                 </ul>
             </nav>
         </header>
@@ -39,27 +39,23 @@
                     <!-- início -->
                     <div id="main-inicio">
                         <div class="caixa">
-                            <div class="sub-caixa">
-                                <h1>Nome da rede social</h1>
-                                <p>
-                                    Atinja a fluência no seu idioma de estudo de
-                                    forma leve e natural, enquando interage com
-                                    pessoas de todo o mundo
-                                </p>
-                            </div>
-                            <button class="botao" id="botao-cadastro">
-                                Criar conta
-                            </button>
+                            <h1>langscape</h1>
+                            <p>
+                                Atinja a fluência no seu idioma de estudo de
+                                forma leve e natural, enquando interage com
+                                pessoas de todo o mundo
+                            </p>
                         </div>
-                        <div class="caixa">
-                            <p>Já tem uma conta?</p>
-                            <button
-                                class="botao"
-                                id="botao-login"
-                                onclick="plusSlide(-1)"
-                            >
-                                Entrar
-                            </button>
+                        <div class="caixa-botoes">
+                            <p>Comece agora mesmo</p>
+                            <div>
+                                <button class="botao" id="botao-login">
+                                    Entrar
+                                </button>
+                                <button class="botao" id="botao-cadastro">
+                                    Criar conta
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -117,7 +113,7 @@
                                     </div>
 
                                     <button type="submit" id="botao-entrar">
-                                        Entrar
+                                        <a href="timeline.html">Entrar</a>
                                     </button>
                                 </form>
                                 <div class="ou"><p>ou</p></div>
@@ -127,8 +123,8 @@
                                 </a>
                             </div>
                             <div class="caixa-nao-tem-conta">
-                                <p id="nao-tem-conta">Não tem uma conta?</p>
-                                <button>Criar conta</button>
+                                <p>Não tem uma conta?</p>
+                                <button id="nao-tem-conta">Criar conta</button>
                             </div>
                         </div>
                     </div>
@@ -216,8 +212,8 @@
                                 </a>
                             </div>
                             <div class="caixa-ja-tem-conta">
-                                <p id="ja-tem-conta">Já tem uma conta?</p>
-                                <button>Entrar</button>
+                                <p>Já tem uma conta?</p>
+                                <button id="ja-tem-conta">Entrar</button>
                             </div>
                         </div>
                     </div>
@@ -229,65 +225,172 @@
                             <i
                                 data-feather="arrow-left"
                                 class="icone-seta-esq"
-                                id="botao-voltar-login"
+                                id="botao-voltar-perfil"
                             ></i>
                             <!-- </a> -->
                             <p>langscape</p>
                         </div>
                         <div class="h2-form">
-                            <h2>Login</h2>
+                            <h2>Configurações do perfil</h2>
                             <div class="caixa-form">
                                 <form action="">
-                                    <!-- campo email ou usuario -->
+                                    <!-- campo nome de usuário -->
                                     <div class="label-input">
                                         <div>
                                             <i
-                                                data-feather="mail"
+                                                data-feather="user"
                                                 class="icone-mail"
                                             ></i>
                                             <label for="email-user"
-                                                >E-mail ou usuário
+                                                >Nome de usuário
                                                 <span>*</span></label
                                             >
                                         </div>
                                         <input type="text" name="email-user" />
                                     </div>
 
-                                    <!-- campo senha -->
+                                    <!-- campo biografia -->
                                     <div class="label-input">
                                         <div>
                                             <i
-                                                data-feather="lock"
+                                                data-feather="align-left"
                                                 class="icone-lock"
                                             ></i>
-                                            <label for="senha"
-                                                >Senha <span>*</span></label
-                                            >
+                                            <label for="senha">Biografia</label>
                                         </div>
                                         <input type="password" name="senha" />
                                     </div>
 
-                                    <button
-                                        type="submit"
-                                        id="botao-avancar-perfil"
-                                    >
-                                        Entrar
+                                    <!-- campo foto de perfil -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="camera"
+                                                class="icone-lock"
+                                            ></i>
+                                            <label for="foto"
+                                                >Foto de perfil</label
+                                            >
+                                        </div>
+                                        <div class="div-input-foto">
+                                            <div>Selecionar arquivo</div>
+                                            <input
+                                                type="file"
+                                                name="foto"
+                                                class="input-foto"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" id="perfil-avancar">
+                                        Avançar
                                     </button>
                                 </form>
-                                <div class="ou"><p>ou</p></div>
-                                <a href="" class="entrar-com-google">
-                                    <i class="bi bi-google"></i>
-                                    <p>Entrar com o Google</p>
-                                </a>
-                            </div>
-                            <div class="caixa-nao-tem-conta">
-                                <p id="nao-tem-conta">Não tem uma conta?</p>
-                                <button>Criar conta</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- configurações de idioma -->
+                    <div id="container-conf-idioma">
+                        <div class="voltar">
+                            <!-- <a href="pag-inicial.html"> -->
+                            <i
+                                data-feather="arrow-left"
+                                class="icone-seta-esq"
+                                id="botao-voltar-perfil"
+                            ></i>
+                            <!-- </a> -->
+                            <p>langscape</p>
+                        </div>
+                        <div class="h2-form">
+                            <h2>Configurações de idioma</h2>
+                            <div class="caixa-form">
+                                <form action="">
+                                    <!-- campo idioma -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="globe"
+                                                class="icone-mail"
+                                            ></i>
+                                            <label for="email-user"
+                                                >Principal idioma de estudo
+                                                <span>*</span></label
+                                            >
+                                        </div>
+                                        <select name="" id="">
+                                            <option value="selecine">
+                                                Selecione
+                                            </option>
+                                            <option value="ingles">
+                                                Inglês
+                                            </option>
+                                            <option value="espanhol">
+                                                Espanhol
+                                            </option>
+                                            <option value="frances">
+                                                Francês
+                                            </option>
+                                            <option value="japones">
+                                                Japonês
+                                            </option>
+                                            <option value="coreano">
+                                                Coreano
+                                            </option>
+                                            <option value="arabe">Árabe</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- campo nível de fluência -->
+                                    <div class="label-input">
+                                        <div>
+                                            <i
+                                                data-feather="check-circle"
+                                                class="icone-lock"
+                                            ></i>
+                                            <label for="senha"
+                                                >Nível de fluência
+                                                <span>*</span></label
+                                            >
+                                        </div>
+                                        <select name="" id="">
+                                            <option value="selecione">
+                                                Selecione
+                                            </option>
+                                            <option value="iniciante">
+                                                Iniciante (branco)
+                                            </option>
+                                            <option value="basico1">
+                                                Básico 1 (amarelo)
+                                            </option>
+                                            <option value="basico2">
+                                                Básico 2 (vermelho)
+                                            </option>
+                                            <option value="intermediario1">
+                                                Intermediário 1 (laranja)
+                                            </option>
+                                            <option value="intermediario2">
+                                                Intermediário 2 (verde)
+                                            </option>
+                                            <option value="avancado1">
+                                                Avançado 1 (roxo)
+                                            </option>
+                                            <option value="avancado2">
+                                                Avançado 2 (marrom)
+                                            </option>
+                                            <option value="fluente">
+                                                Fluente (preto)
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <button type="submit" id="idioma-avancar">
+                                        Avançar
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- configurações de interesses -->
 
@@ -295,7 +398,9 @@
                 </div>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+            <p>© 2024 Langscape. Todos os direitos reservados.</p>
+        </footer>
         <script>
             feather.replace();
         </script>

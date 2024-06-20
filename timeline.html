@@ -193,16 +193,26 @@
                             </svg>
                         </div>
                         <div>
-                            <i data-feather="plus" class="icone"></i>
+                            <i data-feather="plus" class="icone icone-mais"></i>
                         </div>
                     </div>
                     <div class="idioma-atual">
-                        <i
+                        <!-- <i
                             class="bi bi-chevron-compact-left icone"
+                            id="chevron-esquerda"
+                        ></i> -->
+                        <!-- <i
+                            class="bi bi-chevron-compact-right icone"
+                            id="chevron-direita"
+                        ></i> -->
+                        <i
+                            data-feather="chevron-left"
+                            class="icone"
                             id="chevron-esquerda"
                         ></i>
                         <i
-                            class="bi bi-chevron-compact-right icone"
+                            data-feather="chevron-right"
+                            class="icone"
                             id="chevron-direita"
                         ></i>
                         <svg
@@ -327,13 +337,17 @@
                 /></a>
             </div>
         </header>
+
+        <!-- Modal de postar -->
         <div id="container-modal-postar">
             <div class="post" id="modal-postar">
                 <div class="linha-1-post">
                     <div class="img-nome-usuario-hora">
-                        <a href=""
-                            ><img src="imagens/img-perfil.jpeg" alt=""
-                        /></a>
+                        <div class="container-img-perfil laranja">
+                            <a href=""
+                                ><img src="imagens/img-perfil.jpeg" alt=""
+                            /></a>
+                        </div>
                         <div class="nome-usuario-hora">
                             <div class="nome-usuario">
                                 <p class="nome">Sophia</p>
@@ -366,6 +380,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Container com o menu lateral e o main (timeline) -->
         <div class="container">
             <div id="postar"><i data-feather="copy"></i></div>
             <aside class="menu">
@@ -410,9 +426,11 @@
                 <div class="post">
                     <div class="linha-1-post">
                         <div class="img-nome-usuario-hora">
-                            <a href=""
-                                ><img src="imagens/img-perfil.jpeg" alt=""
-                            /></a>
+                            <div class="container-img-perfil laranja">
+                                <a href=""
+                                    ><img src="imagens/img-perfil.jpeg" alt=""
+                                /></a>
+                            </div>
                             <div class="nome-usuario-hora">
                                 <div class="nome-usuario">
                                     <p class="nome">Nome</p>
@@ -464,12 +482,15 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="post">
                     <div class="linha-1-post">
                         <div class="img-nome-usuario-hora">
-                            <a href=""
-                                ><img src="imagens/img-perfil.jpeg" alt=""
-                            /></a>
+                            <div class="container-img-perfil verde">
+                                <a href=""
+                                    ><img src="imagens/img-perfil.jpeg" alt=""
+                                /></a>
+                            </div>
                             <div class="nome-usuario-hora">
                                 <div class="nome-usuario">
                                     <p class="nome">Nome</p>
@@ -521,12 +542,15 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="post">
                     <div class="linha-1-post">
                         <div class="img-nome-usuario-hora">
-                            <a href=""
-                                ><img src="imagens/img-perfil.jpeg" alt=""
-                            /></a>
+                            <div class="container-img-perfil laranja">
+                                <a href=""
+                                    ><img src="imagens/img-perfil.jpeg" alt=""
+                                /></a>
+                            </div>
                             <div class="nome-usuario-hora">
                                 <div class="nome-usuario">
                                     <p class="nome">Nome</p>
@@ -578,12 +602,15 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="post">
                     <div class="linha-1-post">
                         <div class="img-nome-usuario-hora">
-                            <a href=""
-                                ><img src="imagens/img-perfil.jpeg" alt=""
-                            /></a>
+                            <div class="container-img-perfil laranja">
+                                <a href=""
+                                    ><img src="imagens/img-perfil.jpeg" alt=""
+                                /></a>
+                            </div>
                             <div class="nome-usuario-hora">
                                 <div class="nome-usuario">
                                     <p class="nome">Nome</p>
@@ -637,7 +664,7 @@
                 </div>
             </main>
         </div>
-        <footer></footer>
+
         <script>
             feather.replace();
         </script>

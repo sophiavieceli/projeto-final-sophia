@@ -1,3 +1,7 @@
+// na navegação da header:
+const home = document.getElementById("item-nav-home");
+const entrar = document.getElementById("item-nav-entrar");
+
 // clicáveis:
 const botaoLogin = document.getElementById("botao-login");
 const botaoCadastro = document.getElementById("botao-cadastro");
@@ -6,11 +10,11 @@ const naoTemConta = document.getElementById("nao-tem-conta");
 const voltarCadastro = document.getElementById("botao-voltar-cadastro");
 const jaTemConta = document.getElementById("ja-tem-conta");
 const cadastroAvancar = document.getElementById("cadastro-avancar");
-// não existem no html ainda:
 const voltarPerfil = document.getElementById("botao-voltar-perfil");
-const perfilContinuar = document.getElementById("perfil-continuar");
+const perfilAvancar = document.getElementById("perfil-avancar");
+// não existem no html ainda:
 const voltarIdioma = document.getElementById("botao-voltar-idioma");
-const idiomaContinuar = document.getElementById("idioma-continuar");
+const idiomaAvancar = document.getElementById("idioma-avancar");
 const voltarInteresses = document.getElementById("botao-voltar-interesses");
 const interessesContinuar = document.getElementById("interesses-continuar");
 const cadastroPronto = document.getElementById("cadastro-pronto");
@@ -65,16 +69,23 @@ function mostrarElemento(elemento) {
 botaoLogin.addEventListener("click", () => {
     esconderElemento(mainInicio);
     mostrarElemento(containerLogin);
+    home.classList.remove("aberto");
+    entrar.classList.add("aberto");
 });
+
 botaoCadastro.addEventListener("click", () => {
     esconderElemento(mainInicio);
     mostrarElemento(containerCadastro);
+    home.classList.remove("aberto");
+    entrar.classList.add("aberto");
 });
 
 // a partir de entrar
 voltarLogin.addEventListener("click", () => {
     esconderElemento(containerLogin);
     mostrarElemento(mainInicio);
+    entrar.classList.remove("aberto");
+    home.classList.add("aberto");
 });
 
 naoTemConta.addEventListener("click", () => {
@@ -86,6 +97,13 @@ naoTemConta.addEventListener("click", () => {
 voltarCadastro.addEventListener("click", () => {
     esconderElemento(containerCadastro);
     mostrarElemento(mainInicio);
+    entrar.classList.remove("aberto");
+    home.classList.add("aberto");
+});
+
+jaTemConta.addEventListener("click", () => {
+    esconderElemento(containerCadastro);
+    mostrarElemento(containerLogin);
 });
 
 cadastroAvancar.addEventListener("click", () => {
@@ -94,6 +112,15 @@ cadastroAvancar.addEventListener("click", () => {
 });
 
 // a partir de configurações do perfil
+voltarPerfil.addEventListener("click", () => {
+    esconderElemento(containerConfPerfil);
+    mostrarElemento(containerCadastro);
+});
+
+perfilAvancar.addEventListener("click", () => {
+    esconderElemento(containerConfPerfil);
+    mostrarElemento(containerConfIdioma);
+});
 
 // a partir de configurações de idioma
 
