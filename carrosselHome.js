@@ -12,13 +12,10 @@ const jaTemConta = document.getElementById("ja-tem-conta");
 const cadastroAvancar = document.getElementById("cadastro-avancar");
 const voltarPerfil = document.getElementById("botao-voltar-perfil");
 const perfilAvancar = document.getElementById("perfil-avancar");
-// não existem no html ainda:
 const voltarIdioma = document.getElementById("botao-voltar-idioma");
 const idiomaAvancar = document.getElementById("idioma-avancar");
 const voltarInteresses = document.getElementById("botao-voltar-interesses");
-const interessesContinuar = document.getElementById("interesses-continuar");
-const cadastroPronto = document.getElementById("cadastro-pronto");
-const comecarUsar = document.getElementById("comecar-a-usar");
+const interessesFinalizar = document.getElementById("interesses-finalizar");
 
 // containers:
 const mainContainer = document.getElementById("main-container");
@@ -27,7 +24,6 @@ const mainInicio = document.getElementById("main-inicio");
 const containerLogin = document.getElementById("container-login");
 const containerCadastro = document.getElementById("container-cadastro");
 const containerConfPerfil = document.getElementById("container-conf-perfil");
-// não existem no html ainda:
 const containerConfIdioma = document.getElementById("container-conf-idioma");
 const containerConfInteresses = document.getElementById(
     "container-conf-interesses"
@@ -123,8 +119,26 @@ perfilAvancar.addEventListener("click", () => {
 });
 
 // a partir de configurações de idioma
+voltarIdioma.addEventListener("click", () => {
+    esconderElemento(containerConfIdioma);
+    mostrarElemento(containerConfPerfil);
+});
+
+idiomaAvancar.addEventListener("click", () => {
+    esconderElemento(containerConfIdioma);
+    mostrarElemento(containerConfInteresses);
+});
 
 // a partir de configurações de interesses
+voltarInteresses.addEventListener("click", () => {
+    esconderElemento(containerConfInteresses);
+    mostrarElemento(containerConfIdioma);
+});
+
+interessesFinalizar.addEventListener("click", () => {
+    esconderElemento(containerConfInteresses);
+    mostrarElemento(containerContaCriada);
+});
 
 // botaoLogin.addEventListener("click", () => {
 //     // containerLogin.style.transform("translateX(-400rem");

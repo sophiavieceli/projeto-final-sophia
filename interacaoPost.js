@@ -1,31 +1,33 @@
-const botaoLike = document.getElementById("botao-like");
-const botaoSalvar = document.getElementById("botao-salvar");
-const botaoEnviar = document.getElementById("botao-enviar");
-const botaoLista = document.getElementById("botao-lista");
+const botaoLike = document.querySelectorAll(".botao-like");
+const botaoSalvar = document.querySelectorAll(".botao-salvar");
 
 let like = false;
 let salvo = false;
 
-botaoLike.addEventListener("click", () => {
-    if (like === true) {
-        botaoLike.style.fill = "transparent";
-        like = false;
-        return;
-    }
-    like = true;
-    botaoLike.style.fill = "pink";
+botaoLike.forEach((b) => {
+    b.addEventListener("click", () => {
+        if (like === true) {
+            b.style.fill = "transparent";
+            b.style.stroke = "#404040";
+            like = false;
+            return;
+        }
+        like = true;
+        b.style.fill = "#fd7d97";
+        b.style.stroke = "#fd7d97";
+    });
 });
 
-botaoSalvar.addEventListener("click", () => {
-    if (salvo === true) {
-        botaoSalvar.style.fill = "transparent";
-        salvo = false;
-        return;
-    }
-    salvo = true;
-    botaoSalvar.style.fill = "yellow";
+botaoSalvar.forEach((b) => {
+    b.addEventListener("click", () => {
+        if (salvo === true) {
+            b.style.fill = "transparent";
+            b.style.stroke = "#404040";
+            salvo = false;
+            return;
+        }
+        salvo = true;
+        b.style.fill = "indigo";
+        b.style.stroke = "indigo";
+    });
 });
-
-botaoEnviar.addEventListener("click", () => {});
-
-botaoLista.addEventListener("click", () => {});
