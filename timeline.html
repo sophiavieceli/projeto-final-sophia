@@ -197,14 +197,6 @@
                         </div>
                     </div>
                     <div class="idioma-atual">
-                        <!-- <i
-                            class="bi bi-chevron-compact-left icone"
-                            id="chevron-esquerda"
-                        ></i> -->
-                        <!-- <i
-                            class="bi bi-chevron-compact-right icone"
-                            id="chevron-direita"
-                        ></i> -->
                         <i
                             data-feather="chevron-left"
                             class="icone"
@@ -351,7 +343,7 @@
                         <div class="nome-usuario-hora">
                             <div class="nome-usuario">
                                 <p class="nome">Sophia</p>
-                                <p>@sophiavieceli</p>
+                                <p class="user">@sophiavieceli</p>
                             </div>
                         </div>
                     </div>
@@ -362,10 +354,13 @@
                 </div>
                 <div class="linha-3-post">
                     <div class="icones">
-                        <i data-feather="image" class="icone-post"></i>
-                        <i data-feather="mic" class="icone-post"></i>
-                        <i data-feather="paperclip" class="icone-post"></i>
-                        <i data-feather="at-sign" class="icone-post"></i>
+                        <i data-feather="image" class="icone-post icone"></i>
+                        <i data-feather="mic" class="icone-post icone"></i>
+                        <i
+                            data-feather="paperclip"
+                            class="icone-post icone"
+                        ></i>
+                        <i data-feather="at-sign" class="icone-post icone"></i>
                     </div>
                     <div class="corrigir-postar">
                         <p id="botao-corrigir">Corrigir</p>
@@ -374,7 +369,7 @@
                 </div>
                 <div class="linha-4-post">
                     <div>
-                        <i class="bi bi-stars"></i>
+                        <i class="bi bi-stars icone"></i>
                         <p>Ajuda da IA</p>
                     </div>
                 </div>
@@ -383,42 +378,44 @@
 
         <!-- Container com o menu lateral e o main (timeline) -->
         <div class="container">
-            <div id="postar"><i data-feather="copy"></i></div>
+            <div id="postar">
+                <i data-feather="copy" class="icone"></i>
+            </div>
             <aside class="menu">
                 <nav>
                     <ul>
                         <li>
-                            <i data-feather="user"></i>
-                            <p>Perfil</p>
+                            <i data-feather="search" class="icone"></i>
+                            <p>Pesquisar</p>
                         </li>
                         <li>
-                            <i data-feather="refresh-cw"></i>
-                            <p>Trocar idioma</p>
+                            <i data-feather="mail" class="icone"></i>
+                            <p>Mensagens</p>
                         </li>
                         <li>
-                            <i data-feather="bookmark"></i>
+                            <i data-feather="bell" class="icone"></i>
+                            <p>Notificações</p>
+                        </li>
+                        <li>
+                            <i data-feather="bookmark" class="icone"></i>
                             <p>Posts salvos</p>
                         </li>
                         <li>
-                            <i data-feather="italic"></i>
+                            <i data-feather="italic" class="icone"></i>
                             <p>Termos adicionados</p>
                         </li>
                         <li>
-                            <i data-feather="settings"></i>
+                            <i data-feather="settings" class="icone"></i>
                             <p>Configurações</p>
                         </li>
                         <li>
-                            <i data-feather="help-circle"></i>
-                            <p>Ajuda</p>
-                        </li>
-                        <li>
-                            <i data-feather="log-out"></i>
+                            <i data-feather="log-out" class="icone"></i>
                             <p>Sair</p>
                         </li>
                     </ul>
                 </nav>
                 <div class="modo-noturno">
-                    <i data-feather="moon" class="icone-lua"></i>
+                    <i data-feather="moon" class="icone-lua icone"></i>
                     <p>Modo noturno</p>
                 </div>
             </aside>
@@ -428,45 +425,59 @@
                         <div class="img-nome-usuario-hora">
                             <div class="container-img-perfil laranja">
                                 <a href=""
-                                    ><img src="imagens/img-perfil.jpeg" alt=""
+                                    ><img
+                                        src="imagens/img-perfil-5.jpeg"
+                                        alt=""
                                 /></a>
                             </div>
                             <div class="nome-usuario-hora">
                                 <div class="nome-usuario">
                                     <p class="nome">Nome</p>
-                                    <p>@nomedeusuario</p>
+                                    <p class="user">@nomedeusuario</p>
                                 </div>
-                                <p>5h</p>
+                                <p class="tempo">5h</p>
                             </div>
                         </div>
-                        <i
-                            data-feather="more-horizontal"
-                            class="icone-post"
-                        ></i>
+                        <div class="metade-direita">
+                            <div class="div-aviso-erro">
+                                <i
+                                    data-feather="alert-circle"
+                                    class="icone-post icone icone-exclamacao verde"
+                                ></i>
+                                <div class="aviso-erro verde">
+                                    A publicação não contém erros.
+                                </div>
+                            </div>
+
+                            <i
+                                data-feather="more-horizontal"
+                                class="icone-post icone"
+                            ></i>
+                        </div>
                     </div>
                     <div class="linha-2-post">
-                        <p>Bla bla bla bla bla em coreano</p>
+                        <p>어제 말한 그 시험을 합격했어!!😌 축하해줘</p>
                         <img src="" alt="" />
                     </div>
                     <div class="linha-3-post">
                         <div class="icones">
                             <i
                                 data-feather="heart"
-                                class="icone-post botao-like"
+                                class="icone-post botao-like icone"
                             ></i>
                             <i
                                 data-feather="bookmark"
-                                class="icone-post botao-salvar"
+                                class="icone-post botao-salvar icone"
                             ></i>
-                            <i data-feather="send" class="icone-post"></i>
-                            <i data-feather="list" class="icone-post"></i>
+                            <i data-feather="send" class="icone-post icone"></i>
+                            <i data-feather="list" class="icone-post icone"></i>
                         </div>
                         <div class="comentar">
                             <p>Comentar</p>
                             <div class="caixa-icone-comentar">
                                 <i
                                     data-feather="message-circle"
-                                    class="icone-post"
+                                    class="icone-post icone"
                                 ></i>
                             </div>
                         </div>
@@ -478,45 +489,62 @@
                         <div class="img-nome-usuario-hora">
                             <div class="container-img-perfil verde">
                                 <a href=""
-                                    ><img src="imagens/img-perfil.jpeg" alt=""
+                                    ><img
+                                        src="imagens/img-perfil-4.jpeg"
+                                        alt=""
                                 /></a>
                             </div>
                             <div class="nome-usuario-hora">
                                 <div class="nome-usuario">
                                     <p class="nome">Nome</p>
-                                    <p>@nomedeusuario</p>
+                                    <p class="user">@nomedeusuario</p>
                                 </div>
-                                <p>5h</p>
+                                <p class="tempo">5h</p>
                             </div>
                         </div>
-                        <i
-                            data-feather="more-horizontal"
-                            class="icone-post"
-                        ></i>
+                        <div class="metade-direita">
+                            <div class="div-aviso-erro">
+                                <i
+                                    data-feather="alert-circle"
+                                    class="icone-post icone icone-exclamacao amarelo"
+                                ></i>
+                                <div class="aviso-erro amarelo">
+                                    A partícula 이 em "수영장이" deveria ser
+                                    substituída por 을.
+                                </div>
+                            </div>
+                            <i
+                                data-feather="more-horizontal"
+                                class="icone-post icone"
+                            ></i>
+                        </div>
                     </div>
                     <div class="linha-2-post">
-                        <p>Bla bla bla bla bla em coreano</p>
+                        <p>
+                            바다와 수영장이 동시 보는 거 마법 같아… 고정관념
+                            맞아, 이게 브라질 가을에 찍은 사진이야
+                        </p>
                         <img src="" alt="" />
                     </div>
                     <div class="linha-3-post">
                         <div class="icones">
                             <i
                                 data-feather="heart"
-                                class="icone-post botao-like"
+                                class="icone-post botao-like icone"
                             ></i>
                             <i
                                 data-feather="bookmark"
-                                class="icone-post botao-salvar"
+                                class="icone-post botao-salvar icone"
                             ></i>
-                            <i data-feather="send" class="icone-post"></i>
-                            <i data-feather="list" class="icone-post"></i>
+                            <i data-feather="send" class="icone-post icone"></i>
+                            <i data-feather="list" class="icone-post icone"></i>
                         </div>
                         <div class="comentar">
                             <p>Comentar</p>
                             <div class="caixa-icone-comentar">
                                 <i
                                     data-feather="message-circle"
-                                    class="icone-post"
+                                    class="icone-post icone"
                                 ></i>
                             </div>
                         </div>
@@ -528,21 +556,34 @@
                         <div class="img-nome-usuario-hora">
                             <div class="container-img-perfil laranja">
                                 <a href=""
-                                    ><img src="imagens/img-perfil.jpeg" alt=""
+                                    ><img
+                                        src="imagens/img-perfil-3.jpeg"
+                                        alt=""
                                 /></a>
                             </div>
                             <div class="nome-usuario-hora">
                                 <div class="nome-usuario">
                                     <p class="nome">Nome</p>
-                                    <p>@nomedeusuario</p>
+                                    <p class="user">@nomedeusuario</p>
                                 </div>
-                                <p>5h</p>
+                                <p class="tempo">5h</p>
                             </div>
                         </div>
-                        <i
-                            data-feather="more-horizontal"
-                            class="icone-post"
-                        ></i>
+                        <div class="metade-direita">
+                            <div class="div-aviso-erro">
+                                <i
+                                    data-feather="alert-circle"
+                                    class="icone-post icone icone-exclamacao vermelho"
+                                ></i>
+                                <div class="aviso-erro vermelho">
+                                    A publicação não contém erros.
+                                </div>
+                            </div>
+                            <i
+                                data-feather="more-horizontal"
+                                class="icone-post icone"
+                            ></i>
+                        </div>
                     </div>
                     <div class="linha-2-post">
                         <p>Bla bla bla bla bla em coreano</p>
@@ -552,21 +593,21 @@
                         <div class="icones">
                             <i
                                 data-feather="heart"
-                                class="icone-post botao-like"
+                                class="icone-post botao-like icone"
                             ></i>
                             <i
                                 data-feather="bookmark"
-                                class="icone-post botao-salvar"
+                                class="icone-post botao-salvar icone"
                             ></i>
-                            <i data-feather="send" class="icone-post"></i>
-                            <i data-feather="list" class="icone-post"></i>
+                            <i data-feather="send" class="icone-post icone"></i>
+                            <i data-feather="list" class="icone-post icone"></i>
                         </div>
                         <div class="comentar">
                             <p>Comentar</p>
                             <div class="caixa-icone-comentar">
                                 <i
                                     data-feather="message-circle"
-                                    class="icone-post"
+                                    class="icone-post icone"
                                 ></i>
                             </div>
                         </div>
@@ -578,21 +619,34 @@
                         <div class="img-nome-usuario-hora">
                             <div class="container-img-perfil laranja">
                                 <a href=""
-                                    ><img src="imagens/img-perfil.jpeg" alt=""
+                                    ><img
+                                        src="imagens/img-perfil-1.jpeg"
+                                        alt=""
                                 /></a>
                             </div>
                             <div class="nome-usuario-hora">
                                 <div class="nome-usuario">
                                     <p class="nome">Nome</p>
-                                    <p>@nomedeusuario</p>
+                                    <p class="user">@nomedeusuario</p>
                                 </div>
-                                <p>5h</p>
+                                <p class="tempo">5h</p>
                             </div>
                         </div>
-                        <i
-                            data-feather="more-horizontal"
-                            class="icone-post"
-                        ></i>
+                        <div class="metade-direita">
+                            <div class="div-aviso-erro">
+                                <i
+                                    data-feather="alert-circle"
+                                    class="icone-post icone icone-exclamacao amarelo"
+                                ></i>
+                                <div class="aviso-erro amarelo">
+                                    A publicação não contém erros.
+                                </div>
+                            </div>
+                            <i
+                                data-feather="more-horizontal"
+                                class="icone-post icone"
+                            ></i>
+                        </div>
                     </div>
                     <div class="linha-2-post">
                         <p>Bla bla bla bla bla em coreano</p>
@@ -602,21 +656,21 @@
                         <div class="icones">
                             <i
                                 data-feather="heart"
-                                class="icone-post botao-like"
+                                class="icone-post botao-like icone"
                             ></i>
                             <i
                                 data-feather="bookmark"
-                                class="icone-post botao-salvar"
+                                class="icone-post botao-salvar icone"
                             ></i>
-                            <i data-feather="send" class="icone-post"></i>
-                            <i data-feather="list" class="icone-post"></i>
+                            <i data-feather="send" class="icone-post icone"></i>
+                            <i data-feather="list" class="icone-post icone"></i>
                         </div>
                         <div class="comentar">
                             <p>Comentar</p>
                             <div class="caixa-icone-comentar">
                                 <i
                                     data-feather="message-circle"
-                                    class="icone-post"
+                                    class="icone-post icone"
                                 ></i>
                             </div>
                         </div>
@@ -630,7 +684,7 @@
         </script>
         <script src="interacaoPost.js"></script>
         <script src="escolherIdioma.js"></script>
-        <script src="adicionarPosts.js"></script>
         <script src="modalPostar.js"></script>
+        <script src="correcaoPost.js"></script>
     </body>
 </html>

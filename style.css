@@ -1,7 +1,3 @@
-:root {
-    --cinza-texto: #404040;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +10,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    color: var(--cinza-texto);
+    color: #404040;
     font-family: "Figtree", sans-serif;
 }
 

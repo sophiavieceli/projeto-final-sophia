@@ -56,8 +56,8 @@ main {
 
     & .container-img {
         max-width: fit-content;
+
         & img {
-            /* height: 80rem; */
             width: 100%;
         }
     }
@@ -174,7 +174,7 @@ main {
         & .h2-form {
             display: flex;
             flex-flow: column;
-            gap: 3rem;
+            gap: 2rem;
 
             & h2 {
                 font-size: 3.2rem;
@@ -187,7 +187,7 @@ main {
                 padding: 3rem 2.5rem;
                 display: flex;
                 flex-flow: column;
-                gap: 2rem;
+                gap: 1.5rem;
                 width: 30rem;
 
                 & form {
@@ -200,7 +200,7 @@ main {
                     & .label-input {
                         display: flex;
                         flex-flow: column;
-                        gap: 0.8rem;
+                        gap: 1rem;
                         width: 100%;
 
                         & div {
@@ -234,7 +234,7 @@ main {
                             position: relative;
                             display: flex;
                             justify-content: center;
-                            margin: 2rem 0;
+                            margin: 1rem 0;
 
                             & div {
                                 width: 8rem;
@@ -274,7 +274,7 @@ main {
                 }
 
                 & .ou {
-                    border-bottom: 1px solid #ebebeb;
+                    border-bottom: 1px solid #c3c3c3b3;
                     display: flex;
                     justify-content: center;
                     width: 80%;
@@ -282,7 +282,7 @@ main {
                     margin-bottom: 2rem;
 
                     & p {
-                        color: #ebebeb;
+                        color: #c3c3c3b3;
                         background-color: white;
                         transform: translateY(50%);
                         padding: 0 1.5rem;

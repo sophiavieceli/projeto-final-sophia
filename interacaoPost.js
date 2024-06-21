@@ -27,7 +27,7 @@ botaoSalvar.forEach((b) => {
             return;
         }
         salvo = true;
-        b.style.fill = "indigo";
-        b.style.stroke = "indigo";
+        b.style.fill = "#ffa7b8";
+        b.style.stroke = "#ffa7b8";
     });
 });
